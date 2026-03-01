@@ -1,0 +1,13 @@
+# Java / Maven
+**/target/
+
+# Node / React
+**/node_modules/
+**/.env
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
