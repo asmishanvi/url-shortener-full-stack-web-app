@@ -77,3 +77,17 @@ Response:
 
 ## CORS
 CORS is configured to allow requests from `http://localhost:3000`.
+
+## Screenshots
+
+### Home
+https://claude.ai/api/22da39ac-5637-4a9b-8056-0eba0368ecde/files/cb79dccd-283d-43ff-852a-6505496df8b4/preview<img width="1456" height="829" alt="image" src="https://github.com/user-attachments/assets/71df87c6-90cb-44d1-8ab9-e53a39030527" />
+
+
+### Short Link Generated
+https://claude.ai/api/22da39ac-5637-4a9b-8056-0eba0368ecde/files/b12d33d4-828c-4e59-ab3c-c951638e4274/preview<img width="1456" height="828" alt="image" src="https://github.com/user-attachments/assets/00768eca-0c69-481d-b97c-2db4ae07b902" />
+
+
+### Stats
+https://claude.ai/api/22da39ac-5637-4a9b-8056-0eba0368ecde/files/50207d7c-965a-4f73-a6b1-e5c4102af3b1/preview<img width="1456" height="838" alt="image" src="https://github.com/user-attachments/assets/87e1f663-3047-4695-8168-859a3a8be2bc" />
+
