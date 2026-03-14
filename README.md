@@ -204,3 +204,4 @@ Home (Idle state)
 Home (After creation)
 
 Stats page
+
