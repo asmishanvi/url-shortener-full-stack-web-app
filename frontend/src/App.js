@@ -1,33 +1,38 @@
-import React from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Stats from "./pages/Stats";
 
 const App = () => {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    if (stored) {
+      setTheme(stored);
+      document.documentElement.setAttribute("data-theme", stored);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    document.documentElement.setAttribute("data-theme", nextTheme);
+  };
+
   return (
     <div className="app">
-      <header className="app-header">
-        <div className="brand">
-          <span className="brand-mark">//</span>
-          <div>
-            <h1>URL Shortener</h1>
-            <p>Fast links, clean insights.</p>
-          </div>
-        </div>
-        <nav className="nav">
-          <NavLink to="/" end>
-            Home
-          </NavLink>
-          <NavLink to="/stats">Stats</NavLink>
-        </nav>
-      </header>
-
+      <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main className="content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/stats" element={<Stats />} />
         </Routes>
       </main>
+      <Toaster position="top-right" />
     </div>
   );
 };

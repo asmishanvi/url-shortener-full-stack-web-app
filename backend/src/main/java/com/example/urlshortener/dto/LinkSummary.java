@@ -1,24 +1,21 @@
 package com.example.urlshortener.dto;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
-public class StatsResponse {
+public class LinkSummary {
     private String originalUrl;
     private String shortCode;
     private LocalDateTime createdAt;
     private Long clickCount;
-    private List<DailyClick> dailyClicks;
 
-    public StatsResponse() {
+    public LinkSummary() {
     }
 
-    public StatsResponse(String originalUrl, String shortCode, LocalDateTime createdAt, Long clickCount, List<DailyClick> dailyClicks) {
+    public LinkSummary(String originalUrl, String shortCode, LocalDateTime createdAt, Long clickCount) {
         this.originalUrl = originalUrl;
         this.shortCode = shortCode;
         this.createdAt = createdAt;
         this.clickCount = clickCount;
-        this.dailyClicks = dailyClicks;
     }
 
     public String getOriginalUrl() {
@@ -51,13 +48,5 @@ public class StatsResponse {
 
     public void setClickCount(Long clickCount) {
         this.clickCount = clickCount;
-    }
-
-    public List<DailyClick> getDailyClicks() {
-        return dailyClicks;
-    }
-
-    public void setDailyClicks(List<DailyClick> dailyClicks) {
-        this.dailyClicks = dailyClicks;
     }
 }

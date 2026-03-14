@@ -25,6 +25,9 @@ public class UrlMapping {
     @Column(nullable = false)
     private LocalDateTime createdAt;
 
+    @Column
+    private LocalDateTime expiresAt;
+
     @Column(nullable = false)
     private Long clickCount;
 
@@ -61,6 +64,14 @@ public class UrlMapping {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getExpiresAt() {
+        return expiresAt;
+    }
+
+    public void setExpiresAt(LocalDateTime expiresAt) {
+        this.expiresAt = expiresAt;
     }
 
     public Long getClickCount() {
