@@ -199,6 +199,8 @@ Create `frontend/public/_redirects` with:
 ```
 
 ## Screenshots
-![Home](https://github.com/user-attachments/assets/71df87c6-90cb-44d1-8ab9-e53a39030527)
-![Short Link Generated](https://github.com/user-attachments/assets/00768eca-0c69-481d-b97c-2db4ae07b902)
-![Stats](https://github.com/user-attachments/assets/87e1f663-3047-4695-8168-859a3a8be2bc)
+Home (Idle state)
+
+Home (After creation)
+
+Stats page
