@@ -32,6 +32,10 @@ App URLs:
 - Frontend: http://localhost:3000
 - Backend: http://localhost:8080
 
+## Live Demo
+- Frontend (Netlify): https://url-shortener-asmishanvi.netlify.app
+- Backend (Render): https://url-shortener-full-stack-web-app.onrender.com
+
 ## Local Development
 ### Prerequisites
 - Java 17
@@ -79,7 +83,9 @@ app.base-url=http://192.168.1.37:8080
 CORS is configured to allow `http://localhost:3000` in:
 `backend/src/main/java/com/example/urlshortener/config/CorsConfig.java`
 
-For production, add your frontend domain here.
+For production, allow your deployed frontend domain(s) (Netlify):
+- `https://scintillating-rugelach-d026ca.netlify.app`
+- `https://url-shortener-asmishanvi.netlify.app`
 
 ## API Documentation
 ### POST `/api/shorten`
@@ -99,6 +105,13 @@ Response:
 {
   "shortUrl": "http://localhost:8080/myalias"
 }
+```
+
+Production example:
+```bash
+curl -X POST https://url-shortener-full-stack-web-app.onrender.com/api/shorten \
+  -H "Content-Type: application/json" \
+  -d '{"originalUrl":"https://example.com/long-path","customAlias":"myalias"}'
 ```
 
 Error responses:
@@ -189,7 +202,7 @@ Update API base URL in:
 
 Set it to your backend domain:
 ```js
-const API_BASE_URL = "https://your-backend-domain.com";
+const API_BASE_URL = "https://url-shortener-full-stack-web-app.onrender.com";
 ```
 
 Add SPA redirect for React Router:
@@ -199,9 +212,6 @@ Create `frontend/public/_redirects` with:
 ```
 
 ## Screenshots
-Home (Idle state)
-
-Home (After creation)
-
-Stats page
-
+- Home (Idle state)
+- Home (After creation)
+- Stats page
